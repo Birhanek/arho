@@ -26,3 +26,11 @@ export interface ProductState {
     message:string
 }
 
+export const Images = {
+    logo:{
+        src:'/Images/company_logo.jpg',
+        alt: 'Araho logo of the company'
+    } 
+    
+}
+
