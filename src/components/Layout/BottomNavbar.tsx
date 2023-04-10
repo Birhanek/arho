@@ -5,15 +5,13 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-const Test = () => {
+const BottomNavBar = () => {
   return (
-    <>
-<AppBar>
   <Toolbar>
     <Grid container>
       <Grid item xs={2}>
       <div className="dropdown">
-  <p className="dropbtn">Dropdo <KeyboardArrowDownIcon sx={{padding:'0px',margin:'0px',fontSize:'16px'}}/></p>
+  <p className="dropbtn">SmartPhones <KeyboardArrowDownIcon sx={{padding:'0px',margin:'0px',fontSize:'16px'}}/></p>
   <div className="dropdown-content">
     <a href="#">Link 1</a>
     <a href="#">Link 2</a>
@@ -74,10 +72,7 @@ const Test = () => {
       
     </Grid>
   </Toolbar>
-</AppBar>
-
-    </>
   )
 }
 
-export default Test
+export default BottomNavBar

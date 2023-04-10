@@ -23,6 +23,25 @@ export interface ProductState {
     product:Product[],
     isLoading:boolean,
     isError :boolean,
-    message:string
+    message?:string
+}
+
+export const Images = {
+    logo:{
+        src:'/Images/company_logo.jpg',
+        alt: 'Araho logo of the company'
+    } 
+    
+}
+
+export enum Languages {
+    English = 'English',
+    NetherLands = 'Netherlands'
+}
+export const LanguageFlags = {
+    flag:{
+        UnitedKingdom: '/Images/UnitedKingdom.png',
+        NetherLands:'/Images/Netherlands.png'
+    }
 }
 
