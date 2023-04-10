@@ -33,6 +33,11 @@ export const Images = {
     } 
     
 }
+export const Currencies = {
+    Euro:'€',
+    Dollar:'$',
+    Pound:'£'
+}
 
 export enum Languages {
     English = 'English',
