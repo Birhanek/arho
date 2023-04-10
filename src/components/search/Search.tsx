@@ -5,10 +5,9 @@ import { SearchInputBase, SearchUpperComponent, SearchWrapper } from './searchCo
 
 const Search = () => {
   return (
-    <SearchUpperComponent sx={{width:150, color:'green'}}>
-         
-        <SearchInputBase placeholder="Search entire store here . . . " inputProps={{ 'aria-label': 'search' }}/>
-       <SearchWrapper><SearchIcon/></SearchWrapper>
+    <SearchUpperComponent>
+        <SearchWrapper> <SearchIcon/> </SearchWrapper>
+        <SearchInputBase placeholder="Search entire store here . . . " inputProps={{ 'aria-label': 'search' }}/>   
     </SearchUpperComponent>
   )
 }
