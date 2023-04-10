@@ -18,7 +18,6 @@ const productSlice = createSlice({
         builder.addCase(getAllProduct.pending,(state)=>{
             state.isLoading = true
             state.isError = false
-            state.message = '',
             state.product = []
         })
         builder.addCase(getAllProduct.fulfilled, (state,action:PayloadAction<Product[]>) => {
@@ -26,6 +25,13 @@ const productSlice = createSlice({
             state.isError = false
             state.product = action.payload
             state.message = 'Data successfully fetched'
+        })
+
+        builder.addCase(getAllProduct.rejected, (state, action) =>{
+            state.isError = true
+            state.isLoading = false
+            state.product = []
+            state.message = action.error.message?.toLocaleLowerCase()
         })
 
         

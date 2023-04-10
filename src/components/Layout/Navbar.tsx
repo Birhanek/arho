@@ -7,6 +7,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Images, LanguageFlags, Languages } from '../../DataInterface/productInterface'
 import { Link } from 'react-router-dom'
 import Search from '../search/Search';
+import BottomNavBar from './BottomNavbar';
 const Navbar = () => {
   const [languageSelector,setLanguageSelector] = useState<string>(Languages.English)
   const [currency,setCurrency] = useState<string>(Languages.English)
@@ -63,7 +64,9 @@ const Navbar = () => {
         </div>
          
 
+        
         </Toolbar>
+        <BottomNavBar/>
       </AppBar>
     </Box>
   )
