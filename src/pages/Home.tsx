@@ -1,8 +1,9 @@
 import React from 'react'
+import FeaturedProduct from '../components/Featured/FeaturedProduct'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div><FeaturedProduct/></div>
   )
 }
 

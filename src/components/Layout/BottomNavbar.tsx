@@ -26,6 +26,7 @@ const BottomNavBar = () => {
           </div>
         </div>
       </Grid>
+
       <Grid item xs={2} sx={{backgroundColor:'#2C3333'}}>
         <div className="dropdown">
           <p className='dropdown-header'>Tablets <KeyboardArrowDownIcon sx={{padding:'0px',margin:'0px',fontSize:'16px'}}/></p>
@@ -36,6 +37,7 @@ const BottomNavBar = () => {
           </div>
         </div>
       </Grid>
+
       <Grid item xs={2} sx={{backgroundColor:'#2C3333'}}>
         <div className="dropdown">
           <p className='dropdown-header'>Laptops &  <KeyboardArrowDownIcon sx={{padding:'0px',margin:'0px',fontSize:'16px'}}/></p>
@@ -46,6 +48,7 @@ const BottomNavBar = () => {
           </div>
         </div>
       </Grid>
+
       <Grid item xs={2} sx={{backgroundColor:'#2C3333'}}>
         <div className="dropdown">
           <p className='dropdown-header'>Computers <KeyboardArrowDownIcon sx={{padding:'0px',margin:'0px',fontSize:'16px'}}/></p>
@@ -56,6 +59,7 @@ const BottomNavBar = () => {
           </div>
         </div>
       </Grid>
+
       <Grid item xs={2} sx={{backgroundColor:'#2C3333'}}>
         <div className="dropdown">
           <p className='dropdown-header'>Monitors <KeyboardArrowDownIcon sx={{padding:'0px',margin:'0px',fontSize:'16px'}}/></p>
@@ -66,6 +70,7 @@ const BottomNavBar = () => {
           </div>
         </div>
       </Grid>
+
       <Grid item xs={2} sx={{backgroundColor:'#2C3333'}}>
         <div className="dropdown">
           <p className='dropdown-header'>Networking Storage <KeyboardArrowDownIcon sx={{padding:'0px',margin:'0px',fontSize:'16px', backgroundColor:'white',color:'green'}}/></p>
@@ -75,7 +80,8 @@ const BottomNavBar = () => {
             <a href="#">Link 3</a>
           </div>
         </div>
-      </Grid>    
+      </Grid> 
+         
     </Grid>
   </Toolbar>
   )

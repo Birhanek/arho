@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <div className="App">
-      Welcome to Aroho collaborator added    </div>
+      Welcome to Araho collaborator added    </div>
   );
 }
 

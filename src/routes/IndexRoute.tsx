@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home'
+import ProductNotFound from '../pages/ProductNotFound'
 
 
 const IndexRoute = () => {
@@ -8,6 +9,7 @@ const IndexRoute = () => {
     <div>
         <Routes>
             <Route path='/' element={<Home/>}/>
+            <Route path='*' element = {<ProductNotFound/>}/>
         </Routes>
     </div>
         
