@@ -4,7 +4,7 @@ import productReducer from "../feature/product/productSlice";
 
 const store = configureStore({
     reducer:{
-        product:productReducer
+        productR:productReducer
     }
 })
 

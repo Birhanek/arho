@@ -14,6 +14,8 @@ const Navbar = () => {
   const [countryFlagSelector, setCountryFlagSelector] = useState <string>(LanguageFlags.flag.UnitedKingdom)
 
   const [currency,setCurrency] = useState<string>(Currencies.Euro)
+
+  const [open, setOpen] = useState<boolean>(false)
   
 
   const handleLanguages = (event:React.ChangeEvent<HTMLSelectElement>) =>{
@@ -28,16 +30,20 @@ const Navbar = () => {
     
   }
 
+  const handleCollapse = () =>{
+    setOpen(!open)
+  }
+
   return (
-    <Box sx={{flexGrow:1}} >
-      <AppBar position='sticky' elevation={2}>
+    <Box sx={{flexGrow:1,width:'100%',position:"sticky",top:0,left:0,zIndex:5}} >
+      <AppBar position='sticky'  elevation={2}>
         <Toolbar sx={{display:'flex', justifyContent:'space-between',alignItems:'center'}}>
-          <Box sx={{display:{
-            xs:'block',
+          <Box onClick ={handleCollapse} sx={{display:{
+            xs:`block`,
             sm: 'block',
             md:'none',
-            lg:'none'
-          }}}>
+            lg:`none`
+          },cursor:'pointer'}}>
               <MenuIcon sx={{color:'black'}}/>
           </Box>
 
@@ -76,7 +82,9 @@ const Navbar = () => {
 
         
         </Toolbar>
-        <BottomNavBar/>
+        
+       <BottomNavBar/>
+        
       </AppBar>
     </Box>
   )

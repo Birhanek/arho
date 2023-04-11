@@ -12,15 +12,24 @@ export default interface Product {
     thumbNail:string,
     images:string[]
 }
-
+export interface ProductApi {
+    products: Product[],
+    total : number,
+    skip: number,
+    limit: number
+}
 export interface ImageT {
     url: string,
     alt: string
 }
+export type ProductProps = {
+    index: number,
+    product : Product
+}
 
 
 export interface ProductState {
-    product:Product[],
+    products: ProductApi ,
     isLoading:boolean,
     isError :boolean,
     message?:string

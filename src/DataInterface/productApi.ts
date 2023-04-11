@@ -1,11 +1,14 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
-import Product from './productInterface'
+import { ProductApi } from './productInterface'
+import axios from 'axios'
 
 const Product_API = 'https://dummyjson.com'
 
-export const getAllProduct =  createAsyncThunk('Mobile store/getAllProduct',async(_,thunkApi)=>{
+export const getAllProduct =  createAsyncThunk('Mobile store/getAllProduct', async(_,thunkApi)=>{
 
-    const response = await fetch(`${Product_API}/products`)
-    const data:Product[] = await response.json()
+    const response = await axios(`${Product_API}/products`)
+
+    const data:ProductApi= await response.data
+
     return data
 })
