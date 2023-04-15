@@ -6,7 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../app/hook'
 import { getAllProduct } from '../../DataInterface/productApi'
 import Loading from '../SideFeatures/Loading'
 import Product from './Product'
-import { grey } from '@mui/material/colors'
+
 
 const FeaturedProduct = () => {
     const  { products, isLoading, isError , message } = useAppSelector(state => state.productR)
@@ -42,7 +42,7 @@ const FeaturedProduct = () => {
     },[dispatch])
 
   return (
-    <Paper className='feature-container'>
+    <Paper elevation={0} className='feature-container'>
         <Typography variant='h1' component='h1' textAlign='center' padding='2rem'>
             Featured Products
         </Typography>
