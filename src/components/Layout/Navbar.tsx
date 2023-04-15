@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <Box sx={{flexGrow:1,width:'100%',position:"sticky",top:0,left:0,zIndex:5}} >
       <AppBar position='sticky'  elevation={2}>
-        <Toolbar sx={{display:'flex', justifyContent:'space-between',alignItems:'center'}}>
+        <Toolbar sx={{display:'flex',backgroundColor:'#fffeee', justifyContent:'space-between',alignItems:'center'}}>
           <Box onClick ={handleCollapse} sx={{display:{
             xs:`block`,
             sm: 'block',
