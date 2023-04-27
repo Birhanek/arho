@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const navbar = () => {
-  return (
-    <div>navbar</div>
-  )
-}
-
-export default navbar
-=======
 
 import React, { useState } from 'react'
 import { AppBar, Box, Toolbar, Badge } from '@mui/material'
@@ -102,4 +91,3 @@ const Navbar = () => {
 }
 
 export default Navbar
->>>>>>> 7176fe08a28de998be2af5b30a81ed3585903a97
