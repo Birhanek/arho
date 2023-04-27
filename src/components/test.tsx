@@ -1,11 +1,9 @@
 import React from 'react'
 
-const test = () => {
+const hello = () => {
   return (
-    <div>test
-      we are the only group in Netherland to collaborate in Github
-    </div>
+    <div>hello</div>
   )
 }
 
-export default test
+export default hello
