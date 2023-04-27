@@ -16,6 +16,7 @@ const Footer = () => {
 
 
   return (
+<<<<<<< HEAD
     <div className="">
       
       <>
@@ -55,6 +56,10 @@ const Footer = () => {
         </Grid>
       </>
         </div>
+=======
+    <div className="App">
+      Welcome to Araho collaborator added    </div>
+>>>>>>> 7176fe08a28de998be2af5b30a81ed3585903a97
   );
 }
 

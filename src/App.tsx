@@ -1,19 +1,23 @@
 import React from 'react';
+import { BrowserRouter} from 'react-router-dom'
 import './App.css';
-import BottomNavbar from './components/Layout/BottomNavbar';
-import Test from './components/Test';
+import IndexRoute from './routes/IndexRoute';
+import Navbar from './components/Layout/Navbar';
+import { Paper } from '@mui/material';
 import Footer from './components/Layout/Footer';
-import ProductDtail from './components/ProductDtail';
+
+
 const App = () => {
 
 
   return (
-    <div className="Appp">
-      <BottomNavbar />
-      <ProductDtail />
-      <Footer />
-    
-    </div>
+    <Paper elevation={0} sx={{paddingX:1,mt:1}}>
+      <BrowserRouter>
+        <Navbar/>
+        <IndexRoute/>
+        <Footer/>
+      </BrowserRouter>
+    </Paper>
   );
 }
 
