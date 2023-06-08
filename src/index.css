@@ -66,8 +66,7 @@ body{
 }
 .favorite_shopping{
     display: none;
-    width: 100%;
-    height: 5vh;
+    width: 50%;
     margin-bottom: 1rem;
 }
 

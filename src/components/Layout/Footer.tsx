@@ -3,10 +3,9 @@ import React from 'react';
 
 const Footer = () => {
 
-
   return (
     <div className="App">
-      Welcome to Araho collaborator added    </div>
+      Welcome to Araho collaborator added</div>
   );
 }
 

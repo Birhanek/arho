@@ -9,8 +9,7 @@ import Product from './Product'
 
 
 const FeaturedProduct = () => {
-    const  { products, isLoading, isError , message } = useAppSelector(state => state.productR)
-
+    const  { products, isLoading, isError , message,search } = useAppSelector(state => state.productR)
     const [manipulator,setManipulator] = useState<number>(0)
     const [dataPerPage] = useState<number>(10)
 
@@ -18,8 +17,13 @@ const FeaturedProduct = () => {
     const indexOfFirstData = manipulator * dataPerPage
     const dispatch = useAppDispatch()
      
-    console.log(products)
-    const productElement =  products.products.slice(indexOfFirstData,indexOfLastData).map((product, index) =>{
+    const productElement =  products.products.slice(indexOfFirstData,indexOfLastData).filter((product)=>{
+        if(search === '') return product
+        else{
+            return (product.title.toLocaleLowerCase().includes(search?.toLocaleLowerCase()) || 
+            product.description.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
+        }
+    }).map((product, index) =>{
 
         return <Product index={index} product={product}/>
     })
