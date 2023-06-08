@@ -32,7 +32,8 @@ export interface ProductState {
     products: ProductApi ,
     isLoading:boolean,
     isError :boolean,
-    message?:string
+    message?:string,
+    search:string,
 }
 
 export const Images = {

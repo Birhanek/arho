@@ -12,13 +12,18 @@ const initialState:ProductState = {
     },
     isLoading:false,
     isError:false,
-    message:''
+    message:'',
+    search:''
 }
 
 const productSlice = createSlice({
     name:'Mobile store',
     initialState,
-    reducers:{},
+    reducers:{
+        searching:(state,action:PayloadAction<string>) => {
+            state.search= action.payload
+        }
+    },
     extraReducers(builder) {
         builder.addCase(getAllProduct.pending,(state)=>{
             state.isLoading = true
@@ -41,5 +46,5 @@ const productSlice = createSlice({
     },
 })
 
-
+export const {searching} = productSlice.actions
 export default productSlice.reducer
