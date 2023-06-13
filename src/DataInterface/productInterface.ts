@@ -1,5 +1,5 @@
 
-export default interface Product {
+export default interface IProduct {
     id:string,
     title:string,
     description:string,
@@ -13,7 +13,7 @@ export default interface Product {
     images:string[]
 }
 export interface ProductApi {
-    products: Product[],
+    products: IProduct[],
     total : number,
     skip: number,
     limit: number
@@ -24,7 +24,7 @@ export interface ImageT {
 }
 export type ProductProps = {
     index: number,
-    product : Product
+    product : IProduct
 }
 
 

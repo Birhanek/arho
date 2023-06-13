@@ -25,7 +25,7 @@ const FeaturedProduct = () => {
         }
     }).map((product, index) =>{
 
-        return <Product index={index} product={product}/>
+        return <Product key={product.id} index={index} product={product}/>
     })
 
     const totalPage = products.limit / dataPerPage;
