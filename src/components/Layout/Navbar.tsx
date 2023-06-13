@@ -8,10 +8,12 @@ import { Currencies, Images, LanguageFlags, Languages } from '../../DataInterfac
 import { Link } from 'react-router-dom'
 import Search from '../search/Search';
 import BottomNavBar from './BottomNavbar';
+import { useAppSelector } from '../../app/hook';
 const Navbar = () => {
   const [languageSelector,setLanguageSelector] = useState<string>(Languages.English)
 
   const [countryFlagSelector, setCountryFlagSelector] = useState <string>(LanguageFlags.flag.UnitedKingdom)
+  const {wishListProduct} = useAppSelector(state=>state.cartR)
 
   const [currency,setCurrency] = useState<string>(Currencies.Euro)
 
@@ -62,7 +64,7 @@ const Navbar = () => {
           </div>
           </div>
 
-          <Badge sx={{display:{xs:'none',sm:'none',md:'block',lg:'block'}}} badgeContent = {1} color="error"> <Link to='/whishList'> <FavoriteBorderIcon/> </Link></Badge>
+          <Badge sx={{display:{xs:'none',sm:'none',md:'block',lg:'block'}}} badgeContent = {wishListProduct.length} color="error"> <Link to='/wishList'> <FavoriteBorderIcon/> </Link></Badge>
           <Badge badgeContent = {1} color="error"> <Link to='/shoppingCart'> <ShoppingCartIcon/> </Link></Badge>
           
          

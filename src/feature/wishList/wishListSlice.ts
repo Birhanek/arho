@@ -1,8 +1,8 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { wishListState } from "../../DataInterface/wishListInterface";
-import Product from "../../DataInterface/productInterface";
+import IProduct from "../../DataInterface/productInterface";
 
-const data:Product[] = localStorage.getItem('wishList') !=='null'? JSON.parse(String(localStorage.getItem('wishList'))) :[]
+const data:IProduct[] = localStorage.getItem('wishList') !==null? JSON.parse(String(localStorage.getItem('wishList'))) :[]
 
 const initialState:wishListState = {
     wishListProduct:data
@@ -12,23 +12,28 @@ const wishListSlice = createSlice({
     name:'cart',
     initialState:initialState,
     reducers:{
-        addToCart:(state,action:PayloadAction<Product>)=>{
+        addToCart:(state,action:PayloadAction<IProduct>)=>{
             let count = 0
-            state.wishListProduct.forEach((product)=>{
-                if(product.id === action.payload.id){
-                    count++
-                }
-            })
-
-            if(count === 0){
+            if(state.wishListProduct.length === 0){
                 state.wishListProduct.push(action.payload)
             }
-            localStorage.setItem('wishList',JSON.stringify(state.wishListProduct))
+            else{
+                state.wishListProduct.forEach((product)=>{
+                    if(product.id === action.payload.id){
+                        count++
+                    }
+                })
+    
+                if(count === 0){
+                    state.wishListProduct.push(action.payload)
+                }
+            }
             
+            localStorage.setItem('wishList',JSON.stringify(state.wishListProduct))
         },
 
-        removeFromCart:(state,action:PayloadAction<Product>)=>{
-           state.wishListProduct = state.wishListProduct.filter((product)=>product.id !==action.payload.id)
+        removeFromCart:(state,action:PayloadAction<String>)=>{
+           state.wishListProduct = state.wishListProduct.filter((product)=>product.id !==action.payload)
            localStorage.setItem('wishList',JSON.stringify(state.wishListProduct))
         },
         deleteAllFromCart:(state)=>{
