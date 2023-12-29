@@ -55,7 +55,7 @@ const FeaturedProduct = () => {
         <Loading/> : 
         isError ? 
         <Typography variant='body1' >{message?.toLocaleUpperCase()}</Typography>:
-        <Container  sx={{display:'grid',gridTemplateColumns:'repeat(4,minMax(0,1fr))',gap:2}}>
+        <Container sx={{display:{xs:'grid'},gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:2}}>
             {
                products && productElement
             }

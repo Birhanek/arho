@@ -5,6 +5,7 @@ import CompareIcon from '@mui/icons-material/Compare';
 import IProduct, { ProductProps } from '../../DataInterface/productInterface'
 import { useAppDispatch } from '../../app/hook';
 import { addToCart } from '../../feature/wishList/wishListSlice';
+import { NavLink } from 'react-router-dom';
 
 const Product = ({index, product} : ProductProps) => {
   const dispatch = useAppDispatch()
@@ -13,7 +14,7 @@ const Product = ({index, product} : ProductProps) => {
   }
   return (
     <Paper className='product_shape' elevation={0}  key={index}  sx={{display:'flex', flexDirection:'column',justifyContent:'center',alignItems:'center', borderRadius:2,cursor:'pointer'}}>
-        <img style={{width:'50%', height:'50%'}} src={product.images[0]} alt={product.title}/>
+        <NavLink to='/productDetail' state={{product}}><img style={{width:'75%', height:'75%',objectFit:'cover'}} src={product.images[0]} alt={product.title}/></NavLink>
         <div className='favorite_shopping'>
             <div className='product-btn'>
               <button className='btnProduct btn__compare_fav' onClick={()=>addToFavorite(product)}><FavoriteBorderIcon className='btnIcon'/></button>

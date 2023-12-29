@@ -15,8 +15,8 @@
 }
 
 .detail_image img {
-    width: 400px;
-    height: 280px;
+    width: 10rem;
+    height: 5rem;
 }
 
 .image_magnifier {
